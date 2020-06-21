@@ -1,48 +1,48 @@
-var questions = [
-    'What\'s your name ?',
+let questions = [
+    'Hey i\'m J.A.R.V.I.S What\'s your name ?',
     'Where are you from?',
     'What\'s your age?',
-    'What project are you working on?',
-    'How may I help you?',
+    'What HNG project are you working on?',
+    'Can I help you?',
     'It was nice talking you :)'
   ];
-  var num = 0;
+  let num = 0;
   
-  var inputBox = document.querySelector("#ans");
-  var output = document.querySelector("#result");
+  let inputBox = document.querySelector("#ans");
+  let output = document.querySelector("#result");
   output.innerHTML = questions[num];
   
-  function showResponse() {
-  var input = inputBox.value;
+  const showResponse =() => {
+  let input = inputBox.value;
   if(inputBox.value == "") {
     
   }else {
   if(num == 0) {
-    output.innerHTML = `Hello ${input} : )`;
+    output.innerHTML = `Hello ${input} `;
     inputBox.value = "";
-    inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    inputBox.setAttribute("placeholder", "Jarvis is typing...");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 1) {
     output.innerHTML = `Nice, ${input} must be a great place!`;
     inputBox.value = "";
-    inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    inputBox.setAttribute("placeholder", "Jarvis is typing...");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 2) {
-    output.innerHTML = `So you are were born in ${2020 - input} ... Cool!`;
+    output.innerHTML = `So you are were born in ${2020 - input} ... you're in your peak!`;
     inputBox.value = "";
-    inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    inputBox.setAttribute("placeholder", "jarvis is typing...");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 3) {
-    output.innerHTML = `Interesting Project @ ${input}!`;
+    output.innerHTML = `Sounds awesome, i totally believe you can finish  Project  ${input}!`;
     inputBox.value = "";
-    inputBox.setAttribute("placeholder", "Wait for 2 secs");
+    inputBox.setAttribute("placeholder", "Jarvis is typing...");
     ++num;
     setTimeout(changeQuestion, 2000);
   } else if(num == 4) {
-    output.innerHTML = `Sorry, I was not made to do this... : ( `;
+    output.innerHTML = `Ouch,this is beyond me, maybe you could ask my cousin Siri!... : ( `;
     inputBox.value = "";
     inputBox.setAttribute("placeholder", "Wait for 2 secs");
     ++num;
@@ -51,7 +51,7 @@ var questions = [
   }
   }
   
-  function changeQuestion() {
+  const changeQuestion=()=>{
   inputBox.setAttribute("placeholder", "Enter your response");
   output.innerHTML = questions[num];
   if(num == 5 ) {
